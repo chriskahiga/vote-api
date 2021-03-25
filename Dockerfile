@@ -3,7 +3,7 @@ FROM image-registry.openshift-image-registry.svc:5000/openshift/golang:latest as
 WORKDIR /build
 ADD . /build/
 
-RUN RUN CGO_ENABLED=0 go build -mod=vendor -o api-server .
+RUN CGO_ENABLED=0 go build -mod=vendor -o api-server .
 
 FROM scratch
 
